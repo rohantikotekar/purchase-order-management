@@ -181,7 +181,7 @@ URGENT: Production Delay - PO12345
 Due to material shortages, we're experiencing delays on PO12345.
 
 Original delivery: Jan 20
-Revised delivery: Feb 5
+Revised delivery: 
 
 Supplier: MegaCorp International
 ```
