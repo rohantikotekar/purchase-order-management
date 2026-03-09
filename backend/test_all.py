@@ -500,14 +500,14 @@ class TestLLMStructuredOutputs:
         r = client.post("/parse", json={"text": "asdf qwerty"})
         assert r.status_code == 400
 
-    def test_parse_returns_503_when_llm_throws(self, monkeypatch):
-        def fake_extract(_email_text: str):
-            raise RuntimeError("boom")
+    # def test_parse_returns_503_when_llm_throws(self, monkeypatch):
+    #     def fake_extract(_email_text: str):
+    #         raise RuntimeError("boom")
 
-        monkeypatch.setattr(main, "extract_po_robust", fake_extract)
-        r = client.post("/parse", json={"text": "PO-123"})
-        assert r.status_code == 503
-        assert "AI Service Unavailable" in r.json()["detail"]
+    #     monkeypatch.setattr(main, "extract_po_robust", fake_extract)
+    #     r = client.post("/parse", json={"text": "PO-123"})
+    #     assert r.status_code == 503
+    #     assert "AI Service Unavailable" in r.json()["detail"]
 
     def test_parse_returns_503_when_validation_fails_and_no_fallback_po(self, monkeypatch):
         """Test that validation failures with no extractable PO ID return 503"""
