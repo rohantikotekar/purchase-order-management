@@ -1,0 +1,100 @@
+@import "tailwindcss";
+
+@theme {
+  /* Define custom color variables for v4 */
+  --color-brand-violet: #7c3aed;
+  --color-brand-cyan: #06b6d4;
+  
+  /* Animations */
+  --animate-shimmer: shimmer 2s linear infinite;
+  
+  @keyframes shimmer {
+    from { background-position: 0 0; }
+    to { background-position: -200% 0; }
+  }
+}
+
+/* ROOT VARIABLES 
+  Using direct Hex codes to avoid "unknown class" errors 
+*/
+:root {
+  --background: #020617; /* Slate 950 */
+  --foreground: #f8fafc; /* Slate 50 */
+  --glass-border: rgba(255, 255, 255, 0.1);
+}
+
+/* BASE STYLES */
+body {
+  background-color: var(--background);
+  color: var(--foreground);
+  font-family: var(--font-sans, ui-sans-serif, system-ui, sans-serif);
+  -webkit-font-smoothing: antialiased;
+  min-height: 100vh;
+  overflow-x: hidden;
+}
+
+/* UTILITIES 
+  Using standard CSS for complex glass effects 
+*/
+
+.glass-panel {
+  background-color: rgba(15, 23, 42, 0.6); /* Slate 900 @ 60% */
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border: 1px solid var(--glass-border);
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+}
+
+.glass-card-hover {
+  transition: all 0.3s ease;
+}
+.glass-card-hover:hover {
+  background-color: rgba(30, 41, 59, 0.7); /* Slate 800 */
+  border-color: rgba(255, 255, 255, 0.2);
+  box-shadow: 0 0 30px -10px rgba(124, 58, 237, 0.15); /* Violet glow */
+}
+
+/* ATMOSPHERE BACKGROUNDS */
+.ambient-mesh {
+  background: 
+    radial-gradient(at 0% 0%, #0f172a 0, transparent 50%), 
+    radial-gradient(at 50% 0%, #1e1b4b 0, transparent 50%), 
+    radial-gradient(at 100% 0%, #312e81 0, transparent 50%);
+  position: fixed;
+  inset: 0;
+  z-index: -10;
+}
+
+.glow-mesh {
+  position: fixed;
+  width: 600px;
+  height: 600px;
+  background: radial-gradient(circle, rgba(124, 58, 237, 0.15) 0%, rgba(0,0,0,0) 70%);
+  top: -200px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: -9;
+  filter: blur(80px);
+  pointer-events: none;
+}
+
+/* TEXT EFFECTS */
+.text-glow {
+  text-shadow: 0 0 20px rgba(255,255,255,0.1);
+}
+
+/* CUSTOM SCROLLBAR */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+::-webkit-scrollbar-thumb {
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 10px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(255, 255, 255, 0.2);
+}
