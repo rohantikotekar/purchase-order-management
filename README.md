@@ -162,7 +162,7 @@ Acme Supplies Team
 From: logistics@globaltech.com
 Subject: Shipment Notification
 
-Purchase Order: GT2024-0012
+Purchase Order: PO2024-0012
 Status: SHIPPED
 Tracking: 1Z999AA10123456784
 Ship Date: 2024-01-10
