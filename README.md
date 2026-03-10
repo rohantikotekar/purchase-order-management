@@ -24,6 +24,11 @@ Automates Purchase Order tracking so supply chain managers always know what's co
 
 ---
 
+## Loom video (demo)
+Link: https://www.loom.com/share/feffd10ad21f40c6a4961f6d51ae0cbb
+
+---
+
 ## Features
 
 ### 📧 Email Parsing
