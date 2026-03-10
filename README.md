@@ -24,6 +24,11 @@ Automates Purchase Order tracking so supply chain managers always know what's co
 
 ---
 
+## UI
+<img width="1914" height="1014" alt="image" src="https://github.com/user-attachments/assets/a1e424d5-c43d-4fd5-b3e8-907b57df69df" />
+
+---
+
 ## Loom video (demo)
 Link: https://www.loom.com/share/feffd10ad21f40c6a4961f6d51ae0cbb
 
