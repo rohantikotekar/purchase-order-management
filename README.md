@@ -203,19 +203,3 @@ Supplier: MegaCorp International
 Please refer to `installation_testing.md` for full setup instructions.
 
 ---
-
-## Project Structure
-```
-relay/
-├── backend/
-│   ├── main.py
-│   ├── requirements.txt
-│   └── test_all.py
-├── frontend/
-│   ├── app/
-│   ├── components/
-│   └── package.json
-├── features.md
-├── installation_testing.md
-└── README.md
-```
