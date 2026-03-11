@@ -146,7 +146,7 @@ Use the **Parser Engine** on the frontend or the **Swagger UI** to test these sp
 | **4. Ambiguous Status** | `PO-22222 Status: Delayed but on schedule now` | **200 OK**: AI infers "On Track" or "Unknown". |
 | **5. Multiple Dates** | `PO-33333 Order: Jan 1, Ship: Feb 15, Delivery: Mar 1` | **200 OK**: Prioritizes "Delivery/Expected" date (Mar 1). |
 | **6. Special Chars** | `PO-44444-ABC#123 from Supplier™ Inc. Items: Wídgëts` | **200 OK**: Handles special characters correctly. |
-| **7. Long Text** | `PO-55555 from [insert 2000 chars of lorem ipsum]` | **200 OK**: Handles text up to 3000 chars. |
+| **7. Long Text** | `PO-33334 Order: Jan 1, Ship: Feb 15, Delivery: Mar 1 from [insert 2000 chars of lorem ipsum]` | **200 OK**: Handles text up to 3000 chars. |
 | **8. Duplicate Test** | Submit `PO-DUP` → Submit `PO-DUP` again immediately. | **409 Conflict**: Second submission blocked. |
 | **9. Case Variation** | Submit `po-case-test` → Submit `PO-CASE-TEST` | **409 Conflict**: Blocked (Case-insensitive check). |
 | **10. Gibberish** | `asdfjkl qwerty zxcvbn 12345 !@#$%` | **400 Bad Request**: Rejects invalid input. |
